@@ -1,0 +1,125 @@
+sts ->
+	file -> new -> spring starter project -> 
+
+name  : 24-spring-boot-cw1
+type  : maven 
+packaging : jar 
+java : 17 
+lang : java
+
+group : 24-spring-boot-cw1
+artifact : 24-spring-boot-cw1
+description : 24-spring-boot-cw1
+package : com 
+
+
+now click on next 
+
+
+spring boot version : 3.2.1 
+
+select dependencies :- 
+	springweb
+	devtools
+	mysqldriver  
+	spring data jdbc 
+
+finish -> 
+
+
+
+
+if we forget any jar in spring project we can add new dependency using two approach 
+		1) manuall add in pom.xml 
+		2) using starter that we use when we create project 
+
+lets use second option to add jar again -> 
+		right click on project -> spring -> add/edit starters -> select your dependency and then finish 
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+configuration -> application.properties 
+ 	data base 
+ 	server port 	
+-------------------------------------
+now check can server is starting or not?
+	using run as spring boot application 
+	yes it's working 
+--------------------------------------------
+
+REST api ->
+
+url 
+
+1) 
+	request  >  input -> json 
+	response > output -> json 
+
+2)	PRODUCT 
+		create > POST 
+		modify > PUT
+		read   > GET 
+		remove > DELETE 
+		 
+	/product -> POST -> save 
+	/product -> GET -> list 
+	/product/1 -> GET -> single read 
+	/product/1 -> DELETE -> remove 
+	/product -> PUT -> update
+	
+--------------------------------------------------
+
+if controller folder is not created then
+	create inside com folder-> 
+	
+how to create RestController ? 
+
+@RestController 
+class ProductController{
+
+}
+-------------------------------------------------
+
+password encryption:- 
+1) pom.xml 
+	spring crypto maven 
+2) create PasswordEncoder using @Bean 
+	create this inside main java file 
+	@SpringBootApplication
+	
+	@Bean
+	PasswordEncoder getEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+now let's use this , 
+
+	signup -> db save -> before 
+
+	
+	
+	
+
+
+
+
+
+	 
+	
+	
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
